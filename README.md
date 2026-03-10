@@ -10,4 +10,4 @@ Unomena test website for a crypto service, written in Svelte for desktop and mob
 6. Make it functional
 7. Make it efficient
 8. Make it pretty
-9. Utilise good coding practices throughout applicable steps
+9. Utilise good coding practices at applicable steps
