@@ -1,0 +1,1 @@
+cards contains the template for the partners and streams card elements (horizontal thumbnails)

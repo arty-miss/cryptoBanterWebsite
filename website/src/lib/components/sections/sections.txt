@@ -1,0 +1,1 @@
+sections contains the page content such as hero, masterclasses, streams, and app promo sections
