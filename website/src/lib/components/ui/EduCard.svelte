@@ -1,5 +1,5 @@
 <script>
-    const { teacherImage = "", logo = "", title = "", description = "", date = ""} = $props();
+    const { logo = "", teacherImage = "", smallTitle = "", date = "", title = "", description = ""} = $props();
 </script>
 
 <div class="card">
@@ -19,7 +19,7 @@
 
 
     <div class="content">
-        <p class="date">{date}</p>
+        <p class="small-title-date">{smallTitle} | {date}</p>
         <h3>{title}</h3>
         <p class="description">{description}</p>
 
@@ -84,7 +84,7 @@
         padding: 20px;
     }
 
-    .date {
+    .small-title-date {
         color: #aaa;
         font-size: 14px;
     }
