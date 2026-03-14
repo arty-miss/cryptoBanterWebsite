@@ -18,25 +18,28 @@
         gap: 8px;
 
         padding: 10px 14px;
-        border-radius: 12px;
+        border-radius: 15px;
 
         cursor: pointer;
-        transition: all 0.2s ease;
+        /* fade out slowly */
+        transition: all 0.5s ease-in-out;
     }
 
     /* white highlight when hovering over item */
     .nav-item:hover {
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.15)
+        /* fade in quickly */
+        transition: all 0.21s ease-in-out;
+        background: rgba(255, 255, 255, 0.2);
     }
 
     img {
-        width: 18px;
-        height: 18px;
+        width: 30px;
+        height: 30px;
     }
 
     span {
-        font-size: 14px;
+        font-family: "Noyh Geometric", sans-serif;
+        font-size: 20px;
         color: white
     }
 </style>

@@ -12,10 +12,10 @@
 
     <!-- nav items in middle -->
     <div class="nav-items">
-        <NavItem icon="/education.png" label="Education" />
-        <NavItem icon="/products.png" label="Products" />
-        <NavItem icon="/careers.png" label="Careers" />
-        <NavItem icon="/community.png" label="Community" />
+        <NavItem icon="/education-icon.png" label="Education" />
+        <NavItem icon="/products-icon.png" label="Products" />
+        <NavItem icon="/careers-icon.png" label="Careers" />
+        <NavItem icon="/community-icon.png" label="Community" />
     </div>
 
     <!-- livestream button on right side -->
@@ -31,19 +31,23 @@
         align-items: center;
         justify-content: space-between;
 
-        padding: 16px 40px;
-
         width: 100%;
     }
 
     .logo img {
         height: 120px;
         cursor: pointer;
+        padding-left: 50px;
     }
 
     .nav-items {
         display: flex;
-        gap: 14px;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .live-stream {
+        padding-right: 55px;
     }
 
 </style>

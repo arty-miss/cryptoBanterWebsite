@@ -9,29 +9,44 @@
     .live {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 7px;
 
-        padding: 10px 16px;
+        padding: 10px 18px;
 
         background: white;
         /* bottom right corner is not soft like the rest */
-        border-radius: 12px 12px 0 12px;
+        border-radius: 10px 10px 0 10px;
 
         font-weight: 500;
         cursor: pointer;
+
+        transform: scale(1);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .live:hover {
+        transform: scale(1.05);
     }
 
 
     .dot {
-        width: 10px;
-        height: 10px;
+        width: 17px;
+        height: 17px;
 
         background: red;
         border-radius: 50%;
+        /* helps prevent flickering */
+        transform: scale(1);
+        transition: all 0.2s ease-in-out;
     }
 
     span {
         /* text colour */
         color: black;
+        font-family: "Noyh Geometric", sans-serif;
+        font-size: 20px;
+
+        transform: scale(1);
+        transform: scale(1);
     }
 </style>
