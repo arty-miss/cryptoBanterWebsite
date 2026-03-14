@@ -38,6 +38,11 @@
         height: 120px;
         cursor: pointer;
         padding-left: 50px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .logo img:hover {
+        transform: scale(1.03);
     }
 
     .nav-items {

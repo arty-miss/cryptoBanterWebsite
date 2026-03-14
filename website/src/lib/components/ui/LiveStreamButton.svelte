@@ -47,6 +47,6 @@
         font-size: 20px;
 
         transform: scale(1);
-        transform: scale(1);
+        transition: all 0.2s ease-in-out;
     }
 </style>
