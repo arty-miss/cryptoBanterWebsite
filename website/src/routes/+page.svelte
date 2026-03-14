@@ -3,18 +3,13 @@
     import Hero from "$lib/components/sections/Hero.svelte";
 </script>
 
-<div><Navbar /></div>
-<Hero />
-
+<Navbar />
 
 <main>
     <!-- hero section -->
-    
+    <Hero />
 </main>
 
 <style>
-/* temp */
-    div {
-        background-color:  black;
-    }
+
 </style>
