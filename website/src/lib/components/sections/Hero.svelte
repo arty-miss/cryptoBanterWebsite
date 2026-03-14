@@ -27,10 +27,21 @@
         </div>
 
         <div class="partners">
-            <img src="/crypto-school-logo.png" alt="Crypto School Logo" />
-            <img src="/banter-bubbles-icon.png" alt="Banter Bubbles Logo" />
-            <img src="/banter-capital.png" alt="Banter Logo Capital" />
-            <img src="/discord-logo.png" alt="Discord Logo" />
+            <div class="partner">
+                <img src="/crypto-school-logo.png" alt="Crypto School Logo">
+            </div>
+
+            <div class="partner">
+                <img src="/banter-bubbles-icon.png" alt="Banter Bubbles Logo">
+            </div>
+
+            <div class="partner">
+                <img src="/banter-capital.png" alt="Banter Logo Capital">
+            </div>
+
+            <div class="partner-discord">
+                <img src="/discord-logo.png" alt="Discord Logo">
+            </div>
         </div>
 
         <p class="section-footer">
@@ -38,7 +49,10 @@
             sociis natoque penatibus et magnis dis parturient montes, nascetur.
         </p>
 
+        <div class="section-divider"></div>
+
     </div>
+
 </section>
 
 <style>
@@ -58,8 +72,9 @@
     }
 
     .hero-overlay {
-        width: 100%;
-        padding: 120px 8%;
+        max-width: 620px;
+        margin-left: 57px;
+        margin-top: 125px;
         font-family: "Noyh Geometric", sans-serif;
     }
 
@@ -67,32 +82,44 @@
         max-width: 620px;
     }
 
+    .tags {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+    }
+
     .hero-tag {
         background: red;
-        padding: 4px 10px;
-        font-size: 0.8rem;
-        font-weight: 1000;
+        padding: 7px 10px;
+        font-size: 1rem;
         border-radius: 7px 7px 0 7px;
     }
 
     .hero-subtag {
-        margin-top: 8px;
+        margin: 0;
         opacity: 0.7;
     }
 
     h1 {
-        font-size: 4rem;
+        white-space: nowrap;
+        font-family: "Roboto", sans-serif !important;
+        /*transform: scale(.85, 1);*/
+        font-size: 5rem;
         font-weight: 800;
-        margin: 20px;
+        margin: 15px 0;
+        margin-top: 20px;
         line-height: 1.1;        
     }
 
     .hero-description {
         opacity: 0.8;
-        margin-bottom: 25px;
+        font-size: 25px;
     }
 
     .hero-buttons {
+        margin-top: 30px;
         display: flex;
         gap: 20px;
         align-items: center;
@@ -117,26 +144,88 @@
         color: black;
     }
 
-    .partners {
-        margin-top: 80px;
-        display: flex;
-        gap: 4px;
-        align-items: center;
-        opacity: 0.9;
+    .hero-buttons a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 1000;
+
+        transition: all 0.25s ease-in-out;
+        transform: scale(1);
     }
 
-    .partners img {
+    .hero-buttons a:hover {
+        transform: scale(1.15);
+    }
+
+    .partners {
+        display: flex;
+        align-items: center;
+        margin-top: 70px;
+    }
+
+    .partner {
+        position: relative;
+        padding: 0 30px;
+    }
+
+    .partner img {
         height: 90px;
         opacity: 0.8;
         transition: opacity 0.2s ease;
     }
 
-    .partners img:hover {
+    .partner-discord img {
+        height: 40px;
+        margin-left: 20px;
+        opacity: 0.8;
+        transition: opacity 0.2s ease;
+    }
+
+
+    .partner img:hover {
         opacity: 1;
+        cursor: pointer;
+    }
+
+    .partner-discord img:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    /* divider */
+    .partner:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        top: -25%;
+        right: 0;
+        height: 150%;
+        width: 3px;
+        /* create the pointed stroke look of template */
+        background: linear-gradient(
+            to bottom,
+            rgba(255,255,255,0) 0%,
+            rgba(255,255,255,0.6) 50%,
+            rgba(255,255,255,0) 100%
+        );
     }
 
     .section-footer {
         font-size: 19px;
         opacity: 0.6;
+        padding-top: 65px;
+        padding-bottom: 30px;
+    }
+
+    .section-divider {
+        width: 200%;
+        margin-left: 400px;
+        height: 3px;
+        background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.4) 50%,
+            rgba(255, 255, 255, 0) 100%
+        );
     }
 </style>
