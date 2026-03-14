@@ -1,2 +1,18 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+    import Navbar from "$lib/components/layout/Navbar.svelte";
+</script>
+
+<div><Navbar /></div>
+
+
+<main>
+    <!-- hero section -->
+    
+</main>
+
+<style>
+/* temp */
+    div {
+        background-color:  black;
+    }
+</style>
