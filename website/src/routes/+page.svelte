@@ -2,6 +2,7 @@
     import Navbar from "$lib/components/layout/Navbar.svelte";
     import Hero from "$lib/components/sections/Hero.svelte";
     import Education from "$lib/components/sections/Education.svelte";
+    import Product from "$lib/components/sections/Product.svelte";
 </script>
 
 <Navbar />
@@ -10,6 +11,7 @@
     <!-- hero section -->
     <Hero />
     <Education />
+    <Product />
 </main>
 
 <style>

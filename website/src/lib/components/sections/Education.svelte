@@ -17,7 +17,7 @@
             smallTitle: "Sniper School",
             date: "9AM, Sept 18, 2026",
             title: "BUILD THE GAME PLAN TO YOUR FIRST $IM",
-            description: "Learn about Bitcoin, and how to start investing in crypto safely and confidently with this step-by-step guide."
+            description: "Learn Sheldon's 10-day trading system that took him to $1M in less than 7 days."
         },
         {
             logo: "/davidd-school-logo.png",
@@ -93,10 +93,10 @@
         width: 600px;
         height: 600px;
 
-        background: radial-gradient(circle, rgba(255,80,160,0.45) 0%, rgba(255,80,160,0) 70%);
+        background: radial-gradient(circle, rgba(217, 33, 107, 1) 100%, rgba(255,80,160,0) 100%);
         filter: blur(120px);
 
-        z-index: 0;
+        z-index: -3;
     }
 
     h1 {
