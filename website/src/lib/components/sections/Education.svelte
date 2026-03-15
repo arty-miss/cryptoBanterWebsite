@@ -32,6 +32,8 @@
 
 <section class="education">
 
+    <div class="section-divider"></div>
+
     <!-- blurred pink gradient at bottom left corner -->
     <div class="pink-blob"></div>
 
@@ -55,13 +57,29 @@
             </EduCard>
         {/each}
     </div>
+
 </section>
 
 <style>
+
+    .section-divider {
+        transform: translate(0, -70px);
+        width: 30%;
+        margin-left: 690px;
+        height: 1px;
+        filter: blur(1.5px);
+        background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.4) 50%,
+            rgba(255, 255, 255, 0) 100%
+        );
+    }
+
     .education {
         position: relative;
         background: rgba(39, 39, 39);
-        padding: 120px 0;
+        padding: 80px 0;
         text-align: center;
         z-index: 1;
         overflow: hidden;
@@ -117,5 +135,10 @@
     .cards :global(.card-container:nth-child(3)) {
         max-width: 465px;    
         transform: translate(0, -20px);
+    }
+
+    /* move last card's buttons down */
+    .cards :global(.card-container:last-child .actions) {
+        transform: translate(0, 20px);
     }
 </style>

@@ -21,6 +21,7 @@
 <style>
 
     .big-border {
+        transform: scale(1.25) translate(25px, -10px);
         width: 175px;
         border-radius: 50px;
 

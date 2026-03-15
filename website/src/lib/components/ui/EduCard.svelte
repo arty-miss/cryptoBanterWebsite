@@ -26,7 +26,7 @@
 
         <div class="actions">
             <button class="signup">Sign Up</button>
-            <button class="learn-more">Learn More</button>
+            <a href="/">Learn More</a>
         </div>
     </div>
 </div>
@@ -56,8 +56,7 @@
     }
 
     .teacher {
-
-        margin-left: 50px;
+        margin-left: 58px;
         width: 90%;
         height: auto;
         display: block;
@@ -93,8 +92,8 @@
     }
 
     .content {
-
         padding: 20px;
+        text-align: left;
     }
 
     .small-title-date {
@@ -103,25 +102,59 @@
     }
 
     h3 {
-        margin: 8px 0;
+        color: white;
+        font-size: 23px;
+        margin-bottom: 40px;
     }
 
     .description {
         color: rgb(204, 204, 204);
         font-size: 14px;
+        margin-bottom: 50px;
     }
 
     .actions {
         margin-top: 16px;
         display: flex;
         gap: 12px;
+        font-family: "Noyh Geometric", sans-serif;
+    }
+
+    .actions a {
+        color: white;
+        margin-top: 13px;
+        margin-left: 11px;
+        text-decoration: none;
+        font-weight: 1000;
+        font-size: 20px;
+
+        transition: all 0.25s ease-in-out;
+        transform: scale(1);
+    }
+
+    .actions a:hover {
+        transform: scale(1.15);
     }
 
     .signup {
-        padding: 10px 18px;
-        border: 1px solid rgb(136, 136, 136);
+        z-index: 2;
+        padding: 12px 22px;
+        border: 2px solid white;
         background: transparent;
         color: white;
-        border-radius: 8px;
+        border-radius: 6px;
+
+        font-size: 15px;
+        font-weight: 500;;
+
+        cursor: pointer;
+        transition: all 0.25s ease-in-out;
     }
+
+    .signup:hover {
+        background: white;
+        color: black;
+    }
+
+
 </style>

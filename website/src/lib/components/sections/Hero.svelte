@@ -49,8 +49,6 @@
             sociis natoque penatibus et magnis dis parturient montes, nascetur.
         </p>
 
-        <div class="section-divider"></div>
-
     </div>
 
 </section>
@@ -60,8 +58,16 @@
         position: relative;
         min-height: 100vh;
 
-        /* add background image */
-        background-image: url("/hero-bg-img.png");
+        background-image:
+        /* image fades out downwards */
+            linear-gradient(
+                to bottom,
+                rgba(39,39,39,0) 80%,
+                rgba(39,39,39,0.6) 90%,
+                rgba(39,39,39,1) 100%
+            ),
+            url("/hero-bg-img.png");
+
         background-size: cover;
         background-position: center;
 
@@ -217,15 +223,4 @@
         padding-bottom: 30px;
     }
 
-    .section-divider {
-        width: 200%;
-        margin-left: 400px;
-        height: 3px;
-        background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.4) 50%,
-            rgba(255, 255, 255, 0) 100%
-        );
-    }
 </style>
