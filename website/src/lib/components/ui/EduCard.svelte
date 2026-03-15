@@ -2,7 +2,8 @@
     const { logo = "", teacherImage = "", smallTitle = "", date = "", title = "", description = ""} = $props();
 </script>
 
-<div class="card">
+<div class="card-container">
+    <div class="card">
     <div class="image-wrapper">
         <img class="teacher" src={teacherImage} alt="teacher" />
 
@@ -16,7 +17,7 @@
             <slot name="timer" />
         </div>
     </div>
-
+</div>
 
     <div class="content">
         <p class="small-title-date">{smallTitle} | {date}</p>
@@ -30,17 +31,23 @@
     </div>
 </div>
 
+
 <style>
 
+.card-container {
+    display: flex;
+    flex-direction: column;
+}
+
     .card {
-        width: 360px;
-        border-radius: 20px;
+        width: 100%;
+        border-radius: 35px;
         overflow: hidden;
-        background: #1c1c1c;
-        transition:  transform .25 ease;
+        background: rgba(255, 255, 255, 0.1);
+        transition:  transform .25s ease;
     }
 
-    card:hover {
+    .card:hover {
         transform: scale(1.05);
     }
 
@@ -49,29 +56,34 @@
     }
 
     .teacher {
-        width: 100%;
+
+        margin-left: 50px;
+        width: 90%;
+        height: auto;
         display: block;
     }
 
     .free-badge {
+        font-family: "Roboto", sans-serif;
         position: absolute;
-        top: 16px;
-        left: 16px;
+        top: 30px;
+        left: 30px;
         background: red;
         color: white;
-        font-size: 12px;
+        font-size: 16px;
         padding: 6px 10px;
-        border-radius: 6px;
+        border-radius: 6px 6px 0 6px;
     }
 
     .logo {
         position: absolute;
-        top: 50%;
+        height: 200px;
+        top: 35%;
         left: 20px;
     }
 
     .logo img {
-        height: 40px;
+        height: auto;
     }
 
     .timer {
@@ -81,11 +93,12 @@
     }
 
     .content {
+
         padding: 20px;
     }
 
     .small-title-date {
-        color: #aaa;
+        color: rgb(170, 170, 170);
         font-size: 14px;
     }
 
@@ -94,7 +107,7 @@
     }
 
     .description {
-        color: #ccc;
+        color: rgb(204, 204, 204);
         font-size: 14px;
     }
 
@@ -106,7 +119,7 @@
 
     .signup {
         padding: 10px 18px;
-        border: 1px solid #888;
+        border: 1px solid rgb(136, 136, 136);
         background: transparent;
         color: white;
         border-radius: 8px;

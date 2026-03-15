@@ -1,25 +1,60 @@
 <script>
-    const { days = 3, hours = 22, minutes = 9, seconds = 32 } = $props();
+    const { days = "03", hours = "22", minutes = "09", seconds = "32" } = $props();
 </script>
 
-<span class="next">NEXT MASTERCLASS</span>
-<div class="countdown">
-    <span>{days}DAYS</span>
-    <span>{hours}HRS</span>
-    <span>{minutes}MIN</span>
-    <span>{seconds}SEC</span>
+<div class="big-border">
+    <span class="next">NEXT MASTERCLASS</span>
+    <div class="time">
+        <span>{days}</span>
+        <span>{hours}</span>
+        <span>{minutes}</span>
+        <span>{seconds}</span>
+    </div>
+    <div class="units">
+        <span>DAYS</span>
+        <span>HRS</span>
+        <span>MIN</span>
+        <span>SEC</span>
+    </div>
 </div>
 
 <style>
-    .next {
-        color: white;
+
+    .big-border {
+        width: 175px;
+        border-radius: 50px;
+
+        background: radial-gradient(circle, rgba(255,255,255,0) 40%, rgba(255,255,255,1) 300%);
+        backdrop-filter: blur(3px);
+
+        font-family: "Roboto", sans-serif;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    .countdown {
+
+    .next {
+        margin-top: 4px;
+        color: white;
+        font-size: 8px;
+        line-height: 2;
+    }
+
+    .time {
+        font-family: "Noyh Geometric", sans-serif;
         color: white;
         display: flex;
-        gap: 8px;
-        background: rgba(0, 0, 0, 0.6);
-        padding: 8px 12px;
-        font-size: 12px;
+        gap: 12px;
+        font-size: 25px;
+        line-height: 1;
+    }
+
+    .units {
+        padding-bottom: 5px;
+        color: white;
+        display: flex;
+        gap: 19px;
+        font-size: 8px;
     }
 </style>
