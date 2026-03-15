@@ -12,6 +12,7 @@
     <Hero />
     <Education />
     <Product />
+    <div>test exit</div>
 </main>
 
 <style>
