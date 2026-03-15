@@ -1,5 +1,5 @@
 <script>
-    export let title;
+    const { title = ""} = $props();
 </script>
 
 <div class="item">

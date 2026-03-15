@@ -3,7 +3,7 @@
 </script>
 
 <div class="video">
-    <img src={"https://img.youtube.com/vi/${videoId}/maxresdefault.jpg"} alt={title} />
+    <img src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`} alt={title} />
     <span class="length">{length}</span>
     <p>{title}</p>
 </div>
