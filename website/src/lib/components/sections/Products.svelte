@@ -77,9 +77,11 @@
     .image img {
         transform: translate(0, 12px);
         height: 100%;
-        transition: all 0.45s ease-in-out;
+        transition: all 0.4s ease-in-out;
+        overflow: hidden;
     }
 
+    /* cool */
     .image img:hover {
         transform: rotate(-5deg) translate(0, 60px) scale(1.15);
     }
