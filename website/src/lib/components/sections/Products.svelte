@@ -27,10 +27,13 @@
     .content {
         background: white;
         height: 800px;
-        margin: 0 130px;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 130px;
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+        overflow: hidden;
     }
 
     h1 {
@@ -69,16 +72,16 @@
     }
 
     .image {
+        margin-right: 130px;
         display: flex;
         align-items: flex-end;
         height: 100%;
     }
 
     .image img {
-        transform: translate(0, 12px);
+        transform: translate(0, 3px);
         height: 100%;
         transition: all 0.4s ease-in-out;
-        overflow: hidden;
     }
 
     /* cool */

@@ -1,5 +1,5 @@
 <script>
-    const { logo = "", teacherImage = "", smallTitle = "", date = "", title = "", description = ""} = $props();
+    const { logo = "", teacherImage = "", smallTitle = "", date = "", title = "", description = "", timer = null} = $props();
 </script>
 
 <div class="card-container">
@@ -14,7 +14,7 @@
         </div>
 
         <div class="timer">
-            <slot name="timer" />
+            {@render timer?.()}
         </div>
     </div>
 </div>

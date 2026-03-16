@@ -51,9 +51,12 @@
 
 <section class="streams">
 
+    <!-- blurred blue gradient at top right corner -->
+    <div class="blue-blob"></div>
+
     <StreamHeading
     title="CRYPTO+ STREAMS"
-    description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."
+    description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa."
     />
 
     <div class="grid">
@@ -94,12 +97,51 @@
 <style>
 
     .streams {
+        background: rgb(34, 34, 34);
         padding: 50px 40px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .blue-blob {
+        position: absolute;
+        right: -200px;
+        top: -220px;
+
+        width: 600px;
+        height: 600px;
+
+        background: radial-gradient(circle, rgb(97, 127, 193) 50%, rgba(255,80,160,0) 50%);
+        filter: blur(120px);
     }
 
     .grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        margin-top: 40px;
+    }
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .more {
+        margin: auto;
+        margin-top: 50px;
+        display: block;
+        padding: 12px 20px;
+        border-radius: 8px;
     }
 
 </style>

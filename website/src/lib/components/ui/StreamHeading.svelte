@@ -9,18 +9,23 @@
 
 <style>
     .heading {
+        color: white;
         text-align: center;
-        margin-bottom: 5px;
+        margin-top: 100px;
     }
 
     h2 {
-        font-size: 25px;
+        font-family: "Roboto", sans-serif;
+        font-size: 50px;
         font-weight: 700;
+        margin-bottom: 25px;
     }
 
     p {
-        opacity: 0.7;
-        max-width: 600px;
+        font-family: "Noyh Geometric", sans-serif;
+        opacity: 0.75;
+        max-width: 850px;
         margin: auto;
+        font-size: 30px;
     }
 </style>

@@ -53,7 +53,9 @@
             title={course.title}
             description={course.description}
             >
-            <Countdown slot="timer"/>
+            {#snippet timer()}
+                <Countdown />
+            {/snippet}
             </EduCard>
         {/each}
     </div>
