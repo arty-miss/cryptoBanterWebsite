@@ -8,7 +8,7 @@
         {
             channel:"CHART HACKERS",
             video: {
-            id: "VIDEO_ID_1",
+            id: "5LbXeMK5-fg",
             title: "Crypto Live Trading | With Chart Hackers Team",
             length: "1:12:39"
             },
@@ -22,9 +22,9 @@
         {
             channel: "CRYPTO BANTER",
             video: {
-            id: "VIDEO_ID_2",
+            id: "01F0611dlJo",
             title: "This $2.7B Whale Dump Just SHATTERED The Bitcoin Market Cycle!",
-            duration: "36:12"
+            length: "36:12"
             },
             items: [
             "Don't Let This Bitcoin TRAP Fool You! [HUGE Bounce Loading...]",
@@ -36,9 +36,9 @@
         {
             channel: "247 CRYPTO LIVE",
             video: {
-            id: "VIDEO_ID_3",
+            id: "IDgMfFJgdP4",
             title: "WAIT! The U.S WON'T BUY Bitcoin! What It Means For Crypto",
-            duration: "21:34"
+            length: "21:34"
             },
             items: [
             "If You HATE Money, Ignore This Cypto Major Narrative! [I'm Buying]",
@@ -97,6 +97,7 @@
 <style>
 
     .streams {
+        color: white;
         background: rgb(34, 34, 34);
         padding: 50px 40px;
         position: relative;
@@ -123,10 +124,12 @@
     }
 
     .top {
+        font-family: "Roboto", sans-serif;
+        font-size: 30px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 10px;
+        margin-bottom: 0;
     }
 
     .list {

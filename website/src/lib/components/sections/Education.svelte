@@ -132,11 +132,16 @@
     /* middle card bigger */
     .cards :global(.card-container:nth-child(2)) {
         max-width: 580px;    
+        transform: translate(0, -20px);
     }
 
     .cards :global(.card-container:nth-child(3)) {
         max-width: 465px;    
         transform: translate(0, -20px);
+    }
+
+    .cards :global(.card-container:nth-child(2) .actions) {
+        transform: translate(0, 20px);
     }
 
     /* move last card's buttons down */
