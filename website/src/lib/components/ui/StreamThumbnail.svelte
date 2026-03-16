@@ -15,8 +15,9 @@
 
 <div class="video" onclick={openVideo}>
     <img src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`} alt={title} />
-    <p>{title}</p>
 </div>
+
+<p class="title">{title}</p>
 
 {#if open}
     <div class="modal" onclick={closeVideo}> 
@@ -36,13 +37,44 @@
 
 <style>
     .video {
+        border-radius: 25px;
         position: relative;
         cursor: pointer;
+        transition: all 0.25s ease-in-out;
+        overflow: hidden;
+    }
+
+    /* cool shine effect - https://www.youtube.com/watch?v=bukHY2N3ips */
+    .video::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -75%;
+        width: 50%;
+        height: 100%;
+
+        background: linear-gradient(
+            120deg,
+            transparent,
+            rgba(255, 255, 255, 0.35),
+            transparent
+        );
+
+        transform: skewX(-25deg);
+    }
+
+    .video:hover::before {
+        animation: shine 0.8s ease;
+    }
+
+    @keyframes shine {
+        100% {
+            left: 125%;
+        }
     }
 
     img {
         width: 100%;
-        border-radius: 10px;
     }
 
     p {
