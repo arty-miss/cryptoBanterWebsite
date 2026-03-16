@@ -1,5 +1,5 @@
 <script>
-    const { videoId = "", title = "", length = "" } = $props();
+    const { videoId = "", title = ""} = $props();
 
     let open = $state(false);
 
@@ -15,7 +15,6 @@
 
 <div class="video" onclick={openVideo}>
     <img src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`} alt={title} />
-    <span class="length">{length}</span>
     <p>{title}</p>
 </div>
 
@@ -46,21 +45,13 @@
         border-radius: 10px;
     }
 
-    .length {
-        position: absolute;
-        bottom: 8px;
-        right: 8px;
-        background: black;
-        color: white;
-        padding: 3px 6px;
-        font-size: 12px;
-        border-radius: 4px;
-    }
-
     p {
         font-family: "Noyh Geometric", sans-serif;
         font-size: 35px;
         margin-top: 10px;
+        line-height: 1.2;
+        height: 75px;
+        overflow: hidden;
     }
 
     .modal {

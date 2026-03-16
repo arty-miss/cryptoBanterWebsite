@@ -9,8 +9,7 @@
             channel:"CHART HACKERS",
             video: {
             id: "5LbXeMK5-fg",
-            title: "Crypto Live Trading | With Chart Hackers Team",
-            length: "1:12:39"
+            title: "Crypto Live Trading | With Chart Hackers Team"
             },
             items: [
             "DON'T WAIT! Powell Just FLIPPED Crypto Hard!",
@@ -23,8 +22,7 @@
             channel: "CRYPTO BANTER",
             video: {
             id: "01F0611dlJo",
-            title: "This $2.7B Whale Dump Just SHATTERED The Bitcoin Market Cycle!",
-            length: "36:12"
+            title: "This $2.7B Whale Dump Just SHATTERED The Bitcoin Market Cycle!"
             },
             items: [
             "Don't Let This Bitcoin TRAP Fool You! [HUGE Bounce Loading...]",
@@ -37,8 +35,7 @@
             channel: "247 CRYPTO LIVE",
             video: {
             id: "IDgMfFJgdP4",
-            title: "WAIT! The U.S WON'T BUY Bitcoin! What It Means For Crypto",
-            length: "21:34"
+            title: "WAIT! The U.S WON'T BUY Bitcoin! What It Means For Crypto"
             },
             items: [
             "If You HATE Money, Ignore This Cypto Major Narrative! [I'm Buying]",
@@ -73,7 +70,6 @@
                 <StreamThumbnail
                     videoId={stream.video.id}
                     title={stream.video.title}
-                    length={stream.video.length}
                 />
 
                 <div class="list">
@@ -121,6 +117,9 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 40px;
         margin-top: 40px;
+
+        margin-left: 50px;
+        margin-right: 50px;
     }
 
     .top {
@@ -143,8 +142,26 @@
         margin: auto;
         margin-top: 50px;
         display: block;
-        padding: 12px 20px;
-        border-radius: 8px;
+        padding: 17px 34px;
+        border-radius: 12px;
+
+        outline: none;
+        box-shadow: none;
+
+        border: 2px solid white;
+        background: transparent;
+        color: white;
+
+        font-size: 19px;
+        font-weight: 500;;
+
+        cursor: pointer;
+        transition: all 0.25s ease-in-out;
+    }
+
+    .more:hover {
+        background: white;
+        color: black;
     }
 
 </style>

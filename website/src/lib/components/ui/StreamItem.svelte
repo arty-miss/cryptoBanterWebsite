@@ -3,18 +3,31 @@
 </script>
 
 <div class="item">
-    ▶ {title}
+<!-- &nbsp; is a non-breaking space -->
+    ▶ &nbsp; {title}
 </div>
 
 <style>
     .item {
-        padding: 12px;
-        border-radius: 8px;
-        background: linear-gradient(rgb(28, 28, 28),rgb(17, 17, 17));
-        font-size: 12px;
+        font-family: 'Noyh Geometric', sans-serif;
+        text-align: center;
+        padding: 15px;
+        border-radius: 20px 20px 0 0;
+        background: linear-gradient(rgb(51, 51, 51),rgb(0, 0, 0));
+        font-size: 23px;
+
+        line-height: 1.2;
+        height: calc(2 * 1.2em + 40px); /* 2 lines * line-height + top+bottom padding (20+20) */
+        display: flex;
+        align-items: center;          /* vertically center text */
+        justify-content: center;      /* horizontally center text */
+
+        cursor: pointer;
+        transition: all 0.15s ease-in-out;
     }
 
     .item:hover {
         background: red;
+        border-radius: 20px 20px 0 20px;
     }
 </style>

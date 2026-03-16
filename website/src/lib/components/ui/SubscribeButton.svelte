@@ -3,7 +3,7 @@
 <style>
     .subscribe {
         padding: 12px 24px;
-        border-radius: 8px;
+        border-radius: 12px;
         background:rgb(185, 185, 185);
 
         font-family: "Noyh Geometric", sans-serif;
