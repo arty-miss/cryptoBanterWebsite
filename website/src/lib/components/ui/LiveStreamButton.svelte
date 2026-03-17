@@ -2,7 +2,7 @@
 
 <div class="live">
     <div class="dot"></div> <!-- red dot icon -->
-    <span>Live Streams</span>
+    <a href="#streams">Live Streams</a>
 </div>
 
 <style>
@@ -40,7 +40,7 @@
         transition: all 0.2s ease-in-out;
     }
 
-    span {
+    a {
         /* text colour */
         color: black;
         font-family: "Noyh Geometric", sans-serif;
@@ -48,5 +48,6 @@
 
         transform: scale(1);
         transition: all 0.2s ease-in-out;
+        text-decoration: none;
     }
 </style>

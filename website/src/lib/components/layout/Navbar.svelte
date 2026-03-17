@@ -12,8 +12,8 @@
 
     <!-- nav items in middle -->
     <div class="nav-items">
-        <NavItem icon="/education-icon.png" label="Education" />
-        <NavItem icon="/products-icon.png" label="Products" />
+        <NavItem icon="/education-icon.png" label="Education" link="#education"/>
+        <NavItem icon="/products-icon.png" label="Products" link="#products"/>
         <NavItem icon="/careers-icon.png" label="Careers" />
         <NavItem icon="/community-icon.png" label="Community" />
     </div>

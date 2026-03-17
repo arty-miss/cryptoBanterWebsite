@@ -1,12 +1,12 @@
 <script>
-    const { icon = "", label = ""} = $props();
+    const { icon = "", label = "", link = ""} = $props();
 </script>
 
 <!-- all nav items look the same so it's just a matter of setting the image and text-->
 
 <div class="nav-item">
     <img src={icon} alt={label} />
-    <span>{label}</span>
+    <a href={link}>{label}</a>
 </div>
 
 
@@ -37,9 +37,10 @@
         height: 30px;
     }
 
-    span {
+    a {
         font-family: "Noyh Geometric", sans-serif;
         font-size: 20px;
-        color: white
+        color: white;
+        text-decoration: none;
     }
 </style>

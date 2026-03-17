@@ -33,7 +33,7 @@
     ];
 </script>
 
-<section class="education">
+<section class="education" id="education">
 
     <div class="section-divider"></div>
 

@@ -46,7 +46,7 @@
     ];
 </script>
 
-<section class="streams">
+<section class="streams" id="streams">
 
     <!-- blurred blue gradient at top right corner -->
     <div class="blue-blob"></div>

@@ -1,4 +1,4 @@
-<section class="content">
+<section class="content" id="products">
 
     <div class="text">
 
