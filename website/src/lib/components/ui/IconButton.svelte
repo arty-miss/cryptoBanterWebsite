@@ -1,5 +1,5 @@
 <script>
-    const { src = "", alt = "", size = 45, circle = true} = $props();
+    const { src = "", alt = "", size = 45, circle = true, link = "" } = $props();
 </script>
 
 <div
@@ -7,7 +7,9 @@
     style="width:{size}px;height:{size}px"
     class:circle
 >
-    <img src={src} alt={alt} />
+    <a href={link} target="_blank" rel="noopener noreferrer" class="partner">
+        <img src={src} alt={alt} />
+    </a>
 </div>
 
 <style>
@@ -26,9 +28,14 @@
     }
 
     .icon img {
-        width: 55%;
-        height: 55%;
-        object-fit: contain;
+        display: block;
+        transform: scale(1.2);
+    }
+
+    .partner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .circle {

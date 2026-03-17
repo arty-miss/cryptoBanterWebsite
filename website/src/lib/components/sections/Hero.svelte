@@ -1,3 +1,12 @@
+<script>
+    const partners = [
+        { src: "/crypto-school-logo.png", link: "https://cryptoschool.cryptobanter.com/" },
+        { src: "/banter-bubbles-icon.png", link: "https://banterbubbles.com/" },
+        { src: "/banter-capital.png", link: null },
+        { src: "/discord-logo.png", link: "https://discord.com/" }
+    ]
+</script>
+
 <section class="hero">
     <div class="hero-overlay">
 
@@ -27,21 +36,11 @@
         </div>
 
         <div class="partners">
-            <div class="partner">
-                <img src="/crypto-school-logo.png" alt="Crypto School Logo">
-            </div>
-
-            <div class="partner">
-                <img src="/banter-bubbles-icon.png" alt="Banter Bubbles Logo">
-            </div>
-
-            <div class="partner">
-                <img src="/banter-capital.png" alt="Banter Logo Capital">
-            </div>
-
-            <div class="partner-discord">
-                <img src="/discord-logo.png" alt="Discord Logo">
-            </div>
+            {#each partners as p}
+            <a href={p.link} target="_blank" rel="noopener noreferrer" class="partner">
+                <img src={p.src} alt="partner logo">
+            </a>
+        {/each}
         </div>
 
         <p class="section-footer">
@@ -181,7 +180,7 @@
         transition: opacity 0.2s ease;
     }
 
-    .partner-discord img {
+    .partner:last-child img {
         height: 40px;
         margin-left: 20px;
         opacity: 0.8;

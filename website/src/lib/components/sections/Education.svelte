@@ -9,7 +9,8 @@
             smallTitle: "Intro to Crypto",
             date: "1PM, Sept 20, 2026",
             title: "LEARN CRYPTO IN 7 DAYS!",
-            description: "Learn about Bitcoin, and how to start investing in crypto safely and confidently with this step-by-step guide."
+            description: "Learn about Bitcoin, and how to start investing in crypto safely and confidently with this step-by-step guide.",
+            link: "https://introtocrypto.cryptobanter.com/?source=homepage"
         },
         {
             logo: "/sniper-school-logo.png",
@@ -17,7 +18,8 @@
             smallTitle: "Sniper School",
             date: "9AM, Sept 18, 2026",
             title: "BUILD THE GAME PLAN TO YOUR FIRST $IM",
-            description: "Learn Sheldon's 10-day trading system that took him to $1M in less than 7 days."
+            description: "Learn Sheldon's 10-day trading system that took him to $1M in less than 7 days.",
+            link: "https://sniperschool.cryptobanter.com/?source=homepage"
         },
         {
             logo: "/davidd-school-logo.png",
@@ -25,7 +27,8 @@
             smallTitle: "Daviddtech",
             date: "3PM, Oct 12, 2026",
             title: "CRYPTOCURRENCY AI TRADING",
-            description: "Launch Bots That Trade 24/7 In Less Than 7 Days"
+            description: "Launch Bots That Trade 24/7 In Less Than 7 Days",
+            link: "https://daviddtech.cryptobanter.com/?source=homepage"
         }
     ];
 </script>
@@ -52,6 +55,7 @@
             date={course.date}
             title={course.title}
             description={course.description}
+            link={course.link}
             >
             {#snippet timer()}
                 <Countdown />

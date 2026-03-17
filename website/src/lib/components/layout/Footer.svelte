@@ -19,11 +19,11 @@
             </p>
 
             <div class="socials">
-                <IconButton src="youtube-icon.png" alt="youtube"/>
-                <IconButton src="twitter-icon.png" alt="twitter"/>
-                <IconButton src="message-icon.png" alt="telegram?"/>
-                <IconButton src="instagram-icon.png" alt="instagram"/>
-                <IconButton src="facebook-icon.png" alt="facebook"/>
+                <IconButton src="youtube-icon.png" alt="youtube" link="https://www.youtube.com/@CryptoBanterGroup"/>
+                <IconButton src="twitter-icon.png" alt="twitter" link="https://x.com/crypto_banter"/>
+                <IconButton src="message-icon.png" alt="telegram?" link="https://t.me/cryptobantergroup"/>
+                <IconButton src="instagram-icon.png" alt="instagram" link="https://www.instagram.com/crypto_banter/"/>
+                <IconButton src="facebook-icon.png" alt="facebook"link="https://www.facebook.com/cryptobanter/"/>
             </div>
         </div>
 
@@ -74,7 +74,10 @@
     <div class="bottom">
 
         <div class="site-by">
-            Site by <span class="unomena">UNOMENA</span>
+            Site by 
+            <a href="https://unomena.com" target="_blank" rel="noopener noreferrer" class="unomena">
+                UNOMENA
+            </a>
         </div>
 
         <div class="legal-section">
@@ -171,6 +174,12 @@
         font-size: 22px;
     }
 
+    .site-by a {
+        text-decoration: underline;
+        color: inherit;
+        cursor: pointer;
+    }
+
     .unomena {
         font-weight: 800;
         text-decoration: underline;
@@ -189,7 +198,7 @@
     .section-divider {
         transform: translate(0, -80px);
         width: 90%;
-        margin-left: 130px;
+        margin-left: 150px;
         height: 1px;
         background: linear-gradient(
             to right,
@@ -202,7 +211,7 @@
     .section-divider-second {
         transform: translate(0, 40px);
         width: 90%;
-        margin-left: 130px;
+        margin-left: 150px;
         height: 1px;
         background: linear-gradient(
             to right,

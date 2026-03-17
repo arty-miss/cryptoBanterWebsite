@@ -13,12 +13,20 @@
             dolor. Aenean massa.
         </p>
 
-        <button class="banter-bubbles">Get Banter Bubbles</button>
+        <button 
+            class="banter-bubbles"
+            onclick={() => window.open("https://play.google.com/store/apps/details?id=com.cryptobanter.banterbubbles&hl=en_ZA", "_blank")}
+        >
+        Get Banter Bubbles
+        </button>
 
     </div>
 
     <div class="image">
-        <img src="/bubbles-feature-img.png" alt="product" />
+        <img 
+            src="/bubbles-feature-img.png" alt="product"
+            onclick={() => window.open("https://play.google.com/store/apps/details?id=com.cryptobanter.banterbubbles&hl=en_ZA", "_blank")}
+        />
     </div>
 
 </section>

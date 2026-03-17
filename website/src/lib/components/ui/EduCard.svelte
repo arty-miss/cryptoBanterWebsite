@@ -1,5 +1,5 @@
 <script>
-    const { logo = "", teacherImage = "", smallTitle = "", date = "", title = "", description = "", timer = null} = $props();
+    const { logo = "", teacherImage = "", smallTitle = "", date = "", title = "", description = "", timer = null, link = ""} = $props();
 </script>
 
 <div class="card-container">
@@ -25,8 +25,8 @@
         <p class="description">{description}</p>
 
         <div class="actions">
-            <button class="signup">Sign Up</button>
-            <a href="/">Learn More</a>
+            <button class="signup" onclick={() => window.open(link, "_blank")}>Sign Up</button>
+            <a href="https://cryptoschool.cryptobanter.com/" target="_blank" rel="noopener noreferrer" >Learn More</a>
         </div>
     </div>
 </div>
