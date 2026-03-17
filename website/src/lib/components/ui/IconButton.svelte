@@ -1,5 +1,5 @@
 <script>
-    const { src = "", alt = "", size = 40, circle = true} = $props();
+    const { src = "", alt = "", size = 45, circle = true} = $props();
 </script>
 
 <div
@@ -15,6 +15,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        cursor: pointer;
+        transition: all 0.35s ease-in-out;
+    }
+
+    .icon:hover {
+        transform: scale(1.15) rotate(360deg);
+        background: white;
     }
 
     .icon img {
@@ -25,6 +33,6 @@
 
     .circle {
         border-radius: 50%;
-        background: rgba(255,255,255,0.08);
+        background: rgba(185, 185, 185);
     }
 </style>

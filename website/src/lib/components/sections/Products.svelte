@@ -82,6 +82,7 @@
         transform: translate(0, 3px);
         height: 100%;
         transition: all 0.4s ease-in-out;
+        cursor: pointer;
     }
 
     /* cool */

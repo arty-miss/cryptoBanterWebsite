@@ -5,14 +5,16 @@
 
 <footer class="footer">
 
+    <div class="section-divider"></div>
+
     <div class="top">
 
         <!-- logos and social media icons on left -->
         <div class="brand">
-            <img src="/logo.png" alt="Crypto Banter logo" class="logo"/>
+            <img src="/logo-big.png" alt="Crypto Banter logo" class="logo"/>
 
             <p class="copyright">
-                © 2022 - 2026 Crypto Banter.<br />
+                © 2022 - 2026 <span class="banter">Crypto Banter</span>.<br />
                 All Rights Reserved.
             </p>
 
@@ -66,15 +68,16 @@
 
     </div>
 
+    <div class="section-divider-second"></div>
 
     <!-- bottom -->
     <div class="bottom">
 
-        <div class="siteby">
-            Site by <strong>UNOMENA</strong>
+        <div class="site-by">
+            Site by <span class="unomena">UNOMENA</span>
         </div>
 
-        <div class="legal">
+        <div class="legal-section">
             <a>Our Ethics</a>
             <a>Fulfillment Policy</a>
             <a>Terms of Service</a>
@@ -89,48 +92,62 @@
 <style>
     .footer {
         padding: 80px 60px 30px;
-        color: #dcdcdc;
-        background: linear-gradient(#141414, #0f0f0f);
+        color: white;
+        background: linear-gradient(
+            4deg,
+            rgb(34, 34, 34) 0%,
+            rgb(34, 34, 34) 75%,
+            rgb(60, 60, 60) 90%,
+            rgb(85, 85, 85) 100%
+        );
     }
 
     .top {
         display: grid;
         grid-template-columns: 1.5fr 1fr 1fr 1fr 1.6fr;
-        gap: 60px;
+        gap: 30px;
     }
 
     .logo {
-        width: 180px;
-        margin-bottom: 20px;
+        width: 300px;
+        cursor: pointer;
     }
 
     .copyright {
-        font-size: 14px;
-        opacity: 0.7;
+        font-family: "Noyh Geometric", sans-serif;
+        font-size: 25px;
+        margin-left: 12px;
         margin-bottom: 20px;
+    }
+
+    .banter {
+        text-decoration: underline;
+        cursor: pointer;
     }
 
     .socials {
         display: flex;
-        gap: 12px;
+        margin-left: 12px;
+        gap: 5px;
     }
 
-    .links h4,
+    h4,
     .newsletter h4 {
-        font-size: 13px;
+        font-size: 20;
+        font-family: "Roboto", sans-serif;
         letter-spacing: 1px;
         margin-bottom: 16px;
-        opacity: 0.6;
     }
 
     .links {
+        font-family: "Noyh Geometric", sans-serif;
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
 
     .links a {
-        font-size: 15px;
+        font-size: 20px;
         cursor: pointer;
         opacity: 0.85;
     }
@@ -146,14 +163,53 @@
         justify-content: space-between;
         margin-top: 60px;
         padding-top: 20px;
-        border-top: 1px solid rgba(255,255,255,0.08);
         font-size: 14px;
     }
 
-    .legal {
+    .site-by {
+        font-family: "Noyh Geometric", sans-serif;
+        font-size: 22px;
+    }
+
+    .unomena {
+        font-weight: 800;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .legal-section {
+        font-family: "Noyh Geometric", sans-serif;
+        font-size: 20px;
         display: flex;
         gap: 24px;
-        opacity: 0.7;
+        opacity: 0.5;
+        cursor: pointer;
+    }
+
+    .section-divider {
+        transform: translate(0, -80px);
+        width: 90%;
+        margin-left: 130px;
+        height: 1px;
+        background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.4) 50%,
+            rgba(255, 255, 255, 0) 100%
+        );
+    }
+
+    .section-divider-second {
+        transform: translate(0, 40px);
+        width: 90%;
+        margin-left: 130px;
+        height: 1px;
+        background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.4) 50%,
+            rgba(255, 255, 255, 0) 100%
+        );
     }
 
 </style>
