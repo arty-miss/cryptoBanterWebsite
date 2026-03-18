@@ -175,14 +175,13 @@
     }
 
     .site-by a {
-        text-decoration: underline;
         color: inherit;
         cursor: pointer;
+        text-decoration: none;
     }
 
     .unomena {
         font-weight: 800;
-        text-decoration: underline;
         cursor: pointer;
     }
 
@@ -219,6 +218,121 @@
             rgba(255, 255, 255, 0.4) 50%,
             rgba(255, 255, 255, 0) 100%
         );
+    }
+
+    @media (max-width: 768px) {
+
+        .footer {
+            padding: 60px 24px 30px;
+            background: linear-gradient(
+                45deg,
+                rgb(32, 32, 32) 0%,
+                rgb(35, 35, 35) 75%,
+                rgb(61, 61, 61) 90%,
+                rgb(85, 85, 85) 100%
+            );
+        }
+
+        .section-divider {
+            transform: translate(0, -60px);
+            width: 100%;
+            margin-left: 0;
+        }
+
+        .section-divider-second {
+            transform: translate(0, 40px);
+            width: 90%;
+            margin-left: 50px;
+            margin-top: 25px;;
+            height: 2px;
+            background: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.4) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+        }
+
+        .top {
+            grid-template-columns: 1fr;
+            gap: 0;
+            text-align: center;
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .logo {
+            width: 370px;
+        }
+
+        .copyright {
+            font-size: 32px;
+            margin-left: 0;
+            text-align: center;
+        }
+
+        .socials {
+            margin-left: 0;
+            justify-content: center;
+            margin-top: 80px;
+            margin-bottom: 8px;
+            gap: 6px;
+            transform: scale(1.2);
+        }
+
+        .links {
+            align-items: center;
+            padding: 24px 0 8px;
+        }
+
+        .links h4 {
+            font-size: 20px;
+        }
+
+        .links a {
+            font-size: 33px;
+        }
+
+        .newsletter {
+            align-items: center;
+            margin-top: 24px;
+        }
+
+        .newsletter h4 {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .bottom {
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            margin-top: 40px;
+        }
+
+        .site-by {
+            transform: translate(0, -1385px);
+            font-size: 26px;
+        }
+
+        .legal-section {
+            display: flex;
+            flex-wrap: wrap;         
+            justify-content: center; 
+            gap: 16px;     
+            font-size: 25px;
+        }
+
+        .legal-section a {
+            /* move columns closer together */
+            flex: 0 0 40%;      
+            text-align: center;      
+        }
     }
 
 </style>

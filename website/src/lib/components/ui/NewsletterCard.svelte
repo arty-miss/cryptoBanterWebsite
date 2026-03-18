@@ -1,5 +1,4 @@
 <script>
-    import IconButton from "$lib/components/ui/IconButton.svelte";
     const {title = ""} = $props();
 </script>
 
@@ -52,5 +51,18 @@
     .signup {
         font-size: 20px;
         opacity: 0.7;
+    }
+
+    @media (max-width: 768px) {
+        .newsletter {
+            font-size: 30px;
+            width: 340px;
+            padding: 15px;
+        }
+
+        img {
+            width: 85px;
+            height: 85px;
+        }
     }
 </style>
