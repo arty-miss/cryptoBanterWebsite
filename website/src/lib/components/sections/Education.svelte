@@ -247,7 +247,7 @@
             transform: scaleY(9);
         }
 
-        .carousel-arrow-left {
+        .carousel-arrow-left, .carousel-arrow-right {
             flex-shrink: 0;
             background: rgba(255, 255, 255, 0.1);
             border: none;
@@ -255,32 +255,21 @@
             font-size: 20px;
             width: 36px;
             height: 400px;
-            border-radius: 30px 7px 7px 30px;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: background 0.2s ease;
             align-self: center;
-            margin-bottom: 300px; /* vertically centres against the card image area */
+            margin-bottom: 350px;
+        }
+
+        .carousel-arrow-left {
+            border-radius: 30px 7px 7px 30px;
         }
 
         .carousel-arrow-right {
-            flex-shrink: 0;
-            background: rgba(255, 255, 255, 0.1);
-            border: none;
-            color: white;
-            font-size: 20px;
-            width: 36px;
-            height: 400px;
             border-radius: 7px 30px 30px 7px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background 0.2s ease;
-            align-self: center;
-            margin-bottom: 300px; /* vertically centres against the card image area */
         }
 
         .carousel-arrow-left:hover, .carousel-arrow-right:hover {
