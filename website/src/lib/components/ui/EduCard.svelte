@@ -4,19 +4,19 @@
 
 <div class="card-container">
     <div class="card">
-    <div class="image-wrapper">
-        <img class="teacher" src={teacherImage} alt="teacher" />
+        <div class="image-wrapper">
+            <img class="teacher" src={teacherImage} alt="teacher" />
 
-        <div class="free-badge">AVAILABLE FOR FREE</div>
+            <div class="free-badge">AVAILABLE FOR FREE</div>
 
-        <div class="logo">
-            <img src={logo} alt="company logo" />
+            <div class="logo">
+                <img src={logo} alt="company logo" />
+            </div>
+
+            <div class="timer">
+                {@render timer?.()}
+            </div>
         </div>
-
-        <div class="timer">
-            {@render timer?.()}
-        </div>
-    </div>
 </div>
 
     <div class="content">
@@ -34,10 +34,11 @@
 
 <style>
 
-.card-container {
-    display: flex;
-    flex-direction: column;
-}
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
 
     .card {
         width: 100%;
@@ -94,6 +95,10 @@
     .content {
         padding: 20px;
         text-align: left;
+
+        display: flex;
+        flex-direction: column;
+        flex: 1;
     }
 
     .small-title-date {
@@ -111,17 +116,18 @@
         color: rgb(204, 204, 204);
         font-size: 14px;
         margin-bottom: 50px;
+        min-height: 50px;
     }
 
     .actions {
-        margin-top: 16px;
+        margin-top: auto;
         display: flex;
         gap: 12px;
-        font-family: "Noyh Geometric", sans-serif;
     }
 
     .actions a {
         color: white;
+        font-family: "Noyh Geometric", sans-serif;
         margin-top: 13px;
         margin-left: 11px;
         text-decoration: none;
@@ -155,6 +161,57 @@
         background: white;
         color: black;
     }
+
+    /* fixed image heights for mobile */
+    @media (max-width: 768px) {
+        .image-wrapper {
+            height: 480px;
+            display: flex;
+            align-items: flex-end; /* keeps subject anchored nicely */
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .free-badge {
+            transform: scale(1.3) translate(15px, 0px);
+        }
+
+        .logo img {
+            width: 150%;
+        }
+
+        .teacher {
+            height: 100%;
+            width: auto;
+            object-fit: contain; /* or "cover" depending on look you want */
+            margin-left: 155px; /* important for centering on mobile */
+        }
+
+        .small-title-date{
+            text-align: center;
+            transform: scale(1.3);
+        }
+
+        h3 {
+            text-align: center;
+            transform: scale(1.1);
+        }
+
+        .description {
+            font-family: 'Noyh Geometric', sans-serif;
+            font-size: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .actions {
+            transform: scale(1.5) translate(150px, 0px);
+        }
+
+        .actions a {
+            font-weight: 100;
+        }
+}
 
 
 </style>

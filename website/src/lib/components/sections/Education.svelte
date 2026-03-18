@@ -17,7 +17,7 @@
             teacherImage: "/sniper-school-host.png",
             smallTitle: "Sniper School",
             date: "9AM, Sept 18, 2026",
-            title: "BUILD THE GAME PLAN TO YOUR FIRST $IM",
+            title: "BUILD THE GAME PLAN TO YOUR FIRST $1M",
             description: "Learn Sheldon's 10-day trading system that took him to $1M in less than 7 days.",
             link: "https://sniperschool.cryptobanter.com/?source=homepage"
         },
@@ -31,6 +31,18 @@
             link: "https://daviddtech.cryptobanter.com/?source=homepage"
         }
     ];
+
+    let activeIndex = $state(0);
+
+    // circular wrap around
+    function prev() {
+        activeIndex = (activeIndex - 1 + courses.length) % courses.length;
+    }
+
+    // circular wrap around
+    function next() {
+        activeIndex = (activeIndex + 1) % courses.length;
+    }
 </script>
 
 <section class="education" id="education">
@@ -46,28 +58,67 @@
         ligula eget dolor. Aenean massa.
     </p>
 
-    <div class="cards">
+    <!-- desktop: show all 3 cards -->
+    <div class="cards desktop-cards">
         {#each courses as course}
             <EduCard 
-            logo={course.logo}
-            teacherImage={course.teacherImage}
-            smallTitle={course.smallTitle}
-            date={course.date}
-            title={course.title}
-            description={course.description}
-            link={course.link}
+                logo={course.logo}
+                teacherImage={course.teacherImage}
+                smallTitle={course.smallTitle}
+                date={course.date}
+                title={course.title}
+                description={course.description}
+                link={course.link}
             >
-            {#snippet timer()}
-                <Countdown />
-            {/snippet}
+                {#snippet timer()}
+                    <Countdown />
+                {/snippet}
             </EduCard>
+        {/each}
+    </div>
+
+    <!-- mobile: one card at a time -->
+    <div class="mobile-carousel">
+
+        <button class="carousel-arrow-left" onclick={prev} aria-label="Previous"><span class="arrow">&#60;</span></button>
+
+        <!-- only one card via its index -->
+        <div class="carousel-card">
+            <EduCard
+                logo={courses[activeIndex].logo}
+                teacherImage={courses[activeIndex].teacherImage}
+                smallTitle={courses[activeIndex].smallTitle}
+                date={courses[activeIndex].date}
+                title={courses[activeIndex].title}
+                description={courses[activeIndex].description}
+                link={courses[activeIndex].link}
+            >
+                {#snippet timer()}
+                    <Countdown />
+                {/snippet}
+            </EduCard>
+        </div>
+
+        <button class="carousel-arrow-right" onclick={next} aria-label="Previous"><span class="arrow">&#62;</span></button>
+    </div>
+
+    <!--
+    dot indicators for mobile 
+    loop through courses and render dots
+    -->
+    <div class="carousel-dots">
+        {#each courses as _, i}
+            <button
+                class="dot {i === activeIndex ? 'active' : ''}"
+                onclick={() => activeIndex = i}
+                aria-label="Go to slide {i + 1}"
+            ></button>
         {/each}
     </div>
 
 </section>
 
 <style>
-
     .section-divider {
         transform: translate(0, -70px);
         width: 30%;
@@ -95,13 +146,10 @@
         position: absolute;
         left: -200px;
         bottom: -220px;
-
         width: 600px;
         height: 600px;
-
         background: radial-gradient(circle, rgba(217, 33, 107, 1) 100%, rgba(255,80,160,0) 100%);
         filter: blur(120px);
-
         z-index: -3;
     }
 
@@ -118,38 +166,149 @@
         font-size: 25px;
     }
 
+    /* desktop cards */
     .cards {
         margin-top: 60px;
         display: flex;
         justify-content: center;
         gap: 40px;
-        /* cards are aligned at the bottom and not top */
         align-items: flex-end;
     }
 
-    /* change card size */
-    .cards :global(.card-container) {
-        flex: 1;
-        max-width: 500px;
+        @media (min-width: 769px) {
+        .cards :global(.card-container) {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .cards :global(.card-container:nth-child(2)) {
+            max-width: 580px;
+        }
+
+        .cards :global(.card-container:nth-child(3)) {
+            max-width: 465px;
+        }
+
+        .cards :global(.card-container:nth-child(2) .actions) {
+            transform: translate(0, 20px);
+        }
+
+        .cards :global(.card-container:last-child .actions) {
+            transform: translate(0, 20px);
+        }
     }
 
-    /* middle card bigger */
-    .cards :global(.card-container:nth-child(2)) {
-        max-width: 580px;    
-        transform: translate(0, -20px);
+    /* mobile carousel */
+    .mobile-carousel {
+        display: none;
     }
 
-    .cards :global(.card-container:nth-child(3)) {
-        max-width: 465px;    
-        transform: translate(0, -20px);
+    .carousel-dots {
+        display: none;
     }
 
-    .cards :global(.card-container:nth-child(2) .actions) {
-        transform: translate(0, 20px);
-    }
+    @media (max-width: 768px) {
 
-    /* move last card's buttons down */
-    .cards :global(.card-container:last-child .actions) {
-        transform: translate(0, 20px);
+        h1 {
+            font-size: 28px;
+            padding: 0 20px;
+        }
+
+        p {
+            font-size: 16px;
+            padding: 0 20px;
+        }
+
+        p br {
+            display: none;
+        }
+
+        .desktop-cards {
+            display: none;
+        }
+
+        .mobile-carousel {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 40px;
+            padding: 0 8px;
+        }
+
+        .carousel-card {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .arrow {
+            font-family: "Times New Roman", sans-serif;
+            font-weight: 1000;
+            transform: scaleY(9);
+        }
+
+        .carousel-arrow-left {
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            font-size: 20px;
+            width: 36px;
+            height: 400px;
+            border-radius: 30px 7px 7px 30px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s ease;
+            align-self: center;
+            margin-bottom: 300px; /* vertically centres against the card image area */
+        }
+
+        .carousel-arrow-right {
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            font-size: 20px;
+            width: 36px;
+            height: 400px;
+            border-radius: 7px 30px 30px 7px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s ease;
+            align-self: center;
+            margin-bottom: 300px; /* vertically centres against the card image area */
+        }
+
+        .carousel-arrow-left:hover, .carousel-arrow-right:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        /*dot indicators */
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 24px;
+        }
+
+        .dot {
+            width: 28px;
+            height: 4px;
+            border-radius: 2px;
+            border: none;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            padding: 0;
+            transition: background 0.2s ease, width 0.2s ease;
+        }
+
+        .dot.active {
+            background: red;
+            width: 48px;
+        }
     }
 </style>

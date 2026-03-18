@@ -58,4 +58,10 @@
         gap: 19px;
         font-size: 8px;
     }
+
+    @media (max-width: 768px) {
+        .big-border {
+            transform: scale(2) translate(60px, -30px);
+        }
+    }
 </style>
