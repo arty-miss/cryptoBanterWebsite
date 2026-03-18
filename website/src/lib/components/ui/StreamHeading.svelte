@@ -28,4 +28,17 @@
         margin: auto;
         font-size: 30px;
     }
+
+
+    @media (max-width: 768px) {
+        p {
+            padding: 0 18px;
+            font-size: 40px;
+            height: auto;
+        }
+
+        .heading {
+            margin-top: 55px;
+        }
+    }
 </style>

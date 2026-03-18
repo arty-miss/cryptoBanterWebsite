@@ -20,4 +20,12 @@
     .subscribe:hover {
         background: red;
     }
+
+    @media (max-width: 768px) {
+        .subscribe {
+            font-size: 30px;
+            margin-right: 15px;
+            padding: 15px 30px;
+        }
+    }
 </style>

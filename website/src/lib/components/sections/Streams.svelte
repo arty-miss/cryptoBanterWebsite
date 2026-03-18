@@ -51,10 +51,12 @@
     <!-- blurred blue gradient at top right corner -->
     <div class="blue-blob"></div>
 
-    <StreamHeading
-    title="CRYPTO+ STREAMS"
-    description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa."
-    />
+    <div class="heading">
+        <StreamHeading
+            title="CRYPTO+ STREAMS"
+            description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa."
+        />
+    </div>
 
     <div class="grid">
 
@@ -100,10 +102,17 @@
         overflow: hidden;
     }
 
+    .heading {
+        z-index: 1000;
+        position: relative;
+    }
+
     .blue-blob {
         position: absolute;
         right: -200px;
         top: -220px;
+
+        z-index: 0;
 
         width: 600px;
         height: 600px;
@@ -162,6 +171,30 @@
     .more:hover {
         background: white;
         color: black;
+    }
+
+        @media (max-width: 768px) {
+            .streams {
+                padding: 40px 20px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+                margin-left: 0;
+                margin-right: 0;
+                gap: 0px;
+            }
+
+            .list {
+                display: none;
+            }
+
+            .top {
+                font-size: 30px;
+            }
+
+
+
     }
 
 </style>
