@@ -53,12 +53,12 @@
 </section>
 
 <style>
+    /* ── desktop version */
     .hero {
         position: relative;
         min-height: 100vh;
 
         background-image:
-        /* image fades out downwards */
             linear-gradient(
                 to bottom,
                 rgba(39,39,39,0) 80%,
@@ -110,7 +110,6 @@
     h1 {
         white-space: nowrap;
         font-family: "Roboto", sans-serif !important;
-        /*transform: scale(.85, 1);*/
         font-size: 5rem;
         font-weight: 800;
         margin: 15px 0;
@@ -138,7 +137,7 @@
         border-radius: 6px;
 
         font-size: 15px;
-        font-weight: 500;;
+        font-weight: 500;
 
         cursor: pointer;
         transition: all 0.25s ease-in-out;
@@ -187,13 +186,7 @@
         transition: opacity 0.2s ease;
     }
 
-
     .partner img:hover {
-        opacity: 1;
-        cursor: pointer;
-    }
-
-    .partner-discord img:hover {
         opacity: 1;
         cursor: pointer;
     }
@@ -206,7 +199,6 @@
         right: 0;
         height: 150%;
         width: 3px;
-        /* create the pointed stroke look of template */
         background: linear-gradient(
             to bottom,
             rgba(255,255,255,0) 0%,
@@ -222,4 +214,122 @@
         padding-bottom: 30px;
     }
 
+    /* mobile */
+    @media (max-width: 768px) {
+
+        .hero {
+            /* stack vertically */
+            flex-direction: column;
+            align-items: stretch;
+            min-height: 100vh;
+
+            background-image:
+                linear-gradient(
+                    to bottom,
+                    rgba(39,39,39,0)    0%,
+                    rgba(39,39,39,0)   45%,
+                    rgba(39,39,39,0.85) 58%,
+                    rgba(39,39,39,1)   68%,
+                    rgba(39,39,39,1)  100%
+                ),
+                url("/hero-bg-img.png");
+
+            background-position: top center;
+            background-size: cover;
+
+            /* content starts below image banner */
+            padding-top: 55vw;
+        }
+
+        .hero-overlay {
+            max-width: 100%;
+            margin-left: 0;
+            margin-top: 0;
+            padding: 240px 50px 0;
+        }
+
+        .hero-content {
+            max-width: 100%;
+        }
+
+        .tags {
+            gap: 10px;
+        }
+
+        .hero-tag {
+            font-size: 1.3rem;
+            padding: 10px 9px;
+            border-radius: 12px 12px 0 12px;
+        }
+
+        .hero-subtag {
+            font-size: 1.3rem;
+        }
+
+        h1 {
+            /* allows wrapping on small screens */
+            white-space: normal;
+            font-size: 3.4rem;
+            margin-top: 40px;
+            line-height: 1.05;
+        }
+
+        .hero-description {
+            font-size: 30px;
+            line-height: 1.6;
+        }
+
+        /* Remove <br> tags visually on mobile */
+        .hero-description br {
+            display: none;
+        }
+
+        .hero-buttons {
+            margin-top: 28px;
+            gap: 18px;
+        }
+
+        .get-started {
+            padding: 22px 26px;
+            font-size: 23px;
+            border-radius: 8px;
+        }
+
+        .hero-buttons a {
+            font-size: 25px;
+        }
+
+        .partners {
+            margin-top: 48px;
+            /* Allow wrapping if logos overflow */
+            flex-wrap: wrap;
+            gap: 0;
+            /* Align to left edge with padding */
+            padding: 0;
+        }
+
+        .partner {
+            padding: 0 16px;
+        }
+
+        .partner img {
+            height: 72px;
+        }
+
+        .partner:last-child img {
+            height: 26px;
+            margin-left: 8px;
+        }
+
+        .section-footer {
+            font-size: 25px;
+            padding-top: 40px;
+            padding-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        .section-footer br {
+            display: none;
+        }
+    }
 </style>
