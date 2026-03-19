@@ -1,7 +1,10 @@
+<!-- mobile version of navbar has very different layout, easier with separate file instead of just some css changes -->
+
 <script>
     import LiveStreamButton from "$lib/components/ui/LiveStreamButton.svelte";
     import NavItem from "$lib/components/ui/NavItem.svelte";
 
+    // open/close navbar menu when clicking on hamburger icon 
     let menuOpen = $state(false);
 
     function toggleMenu() {
@@ -13,7 +16,7 @@
     }
 </script>
 
-<!-- overlay backdrop -->
+<!-- clicking outside of navbar while open automatically closes it -->
 {#if menuOpen}
     <div class="backdrop" onclick={closeMenu}></div>
 {/if}
@@ -31,7 +34,7 @@
     </button>
 </nav>
 
-<!-- slide-down drawer -->
+<!-- slide-down drawer if menu-open set to true, else, no drawer-->
 {#if menuOpen}
     <div class="drawer">
         <div class="drawer-items">
@@ -114,7 +117,7 @@
         left: 0;
         width: 100%;
         z-index: 999;
-        background: linear-gradient(rgb(111, 21, 94), rgb(192, 19, 100));
+        background: linear-gradient(rgb(97, 21, 95), rgb(192, 19, 100));
         backdrop-filter: blur(12px);
         display: flex;
         flex-direction: column;
@@ -125,10 +128,11 @@
         border-bottom-right-radius: 16px;
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 
-        /* animate in */
+        /* short animation */
         animation: slideDown 0.22s ease-out;
     }
 
+    /* like blender */
     @keyframes slideDown {
         from {
         opacity: 0;

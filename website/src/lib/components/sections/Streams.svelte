@@ -1,9 +1,12 @@
+<!-- livestream section after products -->
+
 <script> 
     import StreamHeading from "$lib/components/ui/StreamHeading.svelte";
     import StreamThumbnail from "$lib/components/ui/StreamThumbnail.svelte";
     import StreamItem from "$lib/components/ui/StreamItem.svelte";
     import SubscribeButton from "$lib/components/ui/SubscribeButton.svelte";
 
+    // hardcoded videos
     const streams = [
         {
             channel:"CHART HACKERS",
@@ -60,6 +63,7 @@
 
     <div class="grid">
 
+        <!-- batch load streams from hardcode -->
         {#each streams as stream}
 
             <div class="column">
@@ -103,7 +107,7 @@
     }
 
     .heading {
-        z-index: 1000;
+        z-index: 500;
         position: relative;
     }
 
@@ -185,6 +189,7 @@
                 gap: 0px;
             }
 
+            /* lists not visible on mobile */
             .list {
                 display: none;
             }

@@ -1,3 +1,5 @@
+<!-- static timer used on educards -->
+
 <script>
     const { days = "03", hours = "22", minutes = "09", seconds = "32" } = $props();
 </script>
@@ -59,6 +61,7 @@
         font-size: 8px;
     }
 
+    /* much larger on mobile */
     @media (max-width: 768px) {
         .big-border {
             transform: scale(2) translate(60px, -30px);

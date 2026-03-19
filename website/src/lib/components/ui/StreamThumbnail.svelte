@@ -1,3 +1,5 @@
+<!-- youtube video thumbnails that are clickable and open in a popup -->
+
 <script>
     const { videoId = "", title = ""} = $props();
 
@@ -12,13 +14,14 @@
     }
 </script>
 
-
+<!-- thumbnail image -->
 <div class="video" onclick={openVideo}>
     <img src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`} alt={title} />
 </div>
 
 <p class="title">{title}</p>
 
+<!-- open popup when clicking on thumbnail-->
 {#if open}
     <div class="modal" onclick={closeVideo}> 
         <div class="modal-content" onclick={(e) => e.stopPropagation()}>
@@ -44,7 +47,7 @@
         overflow: hidden;
     }
 
-    /* cool shine effect - https://www.youtube.com/watch?v=bukHY2N3ips */
+    /* cool shine animation - https://www.youtube.com/watch?v=bukHY2N3ips */
     .video::before {
         content: "";
         position: absolute;

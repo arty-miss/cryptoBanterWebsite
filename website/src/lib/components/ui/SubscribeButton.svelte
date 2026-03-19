@@ -1,3 +1,5 @@
+<!-- reused element in streams section -->
+
 <button class="subscribe">Subscribe</button>
 
 <style>

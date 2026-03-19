@@ -1,12 +1,14 @@
+<!-- section with advertised courses after hero-->
+
 <script>
     import EduCard from "$lib/components/ui/EduCard.svelte";
-    import Countdown from "$lib/components/ui/Countdown.svelte";
 
+    // hardcoded courses
     const courses = [
         {
             logo: "/intro-to-crypto-logo.png",
             teacherImage: "/intro-to-crypto-hosts.png",
-            smallTitle: "Intro to Crypto",
+            subTitle: "Intro to Crypto",
             date: "1PM, Sept 20, 2026",
             title: "LEARN CRYPTO IN 7 DAYS!",
             description: "Learn about Bitcoin, and how to start investing in crypto safely and confidently with this step-by-step guide.",
@@ -15,7 +17,7 @@
         {
             logo: "/sniper-school-logo.png",
             teacherImage: "/sniper-school-host.png",
-            smallTitle: "Sniper School",
+            subTitle: "Sniper School",
             date: "9AM, Sept 18, 2026",
             title: "BUILD THE GAME PLAN TO YOUR FIRST $1M",
             description: "Learn Sheldon's 10-day trading system that took him to $1M in less than 7 days.",
@@ -24,7 +26,7 @@
         {
             logo: "/davidd-school-logo.png",
             teacherImage: "/daviddtech-school-host.png",
-            smallTitle: "Daviddtech",
+            subTitle: "Daviddtech",
             date: "3PM, Oct 12, 2026",
             title: "CRYPTOCURRENCY AI TRADING",
             description: "Launch Bots That Trade 24/7 In Less Than 7 Days",
@@ -64,16 +66,12 @@
             <EduCard 
                 logo={course.logo}
                 teacherImage={course.teacherImage}
-                smallTitle={course.smallTitle}
+                subTitle={course.subTitle}
                 date={course.date}
                 title={course.title}
                 description={course.description}
                 link={course.link}
-            >
-                {#snippet timer()}
-                    <Countdown />
-                {/snippet}
-            </EduCard>
+            ></EduCard>
         {/each}
     </div>
 
@@ -87,16 +85,12 @@
             <EduCard
                 logo={courses[activeIndex].logo}
                 teacherImage={courses[activeIndex].teacherImage}
-                smallTitle={courses[activeIndex].smallTitle}
+                subTitle={courses[activeIndex].subTitle}
                 date={courses[activeIndex].date}
                 title={courses[activeIndex].title}
                 description={courses[activeIndex].description}
                 link={courses[activeIndex].link}
-            >
-                {#snippet timer()}
-                    <Countdown />
-                {/snippet}
-            </EduCard>
+            ></EduCard>
         </div>
 
         <button class="carousel-arrow-right" onclick={next} aria-label="Previous"><span class="arrow">&#62;</span></button>

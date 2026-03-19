@@ -1,4 +1,7 @@
+<!-- introduction section after navbar -->
+
 <script>
+    // hardcode logos
     const partners = [
         { src: "/crypto-school-logo.png", link: "https://cryptoschool.cryptobanter.com/" },
         { src: "/banter-bubbles-icon.png", link: "https://banterbubbles.com/" },
@@ -12,6 +15,7 @@
 
         <div class="hero-content">
 
+            <!-- little red rectangle with text next to it -->
             <div class="tags">
                 <span class="hero-tag">LOREM IPSUM</span>
                 <p class="hero-subtag">Lorem Ipsum Dolor</p>
@@ -35,12 +39,14 @@
             
         </div>
 
+        <!-- batch load logos from hardcode -->
         <div class="partners">
             {#each partners as p}
-            <a href={p.link} target="_blank" rel="noopener noreferrer" class="partner">
-                <img src={p.src} alt="partner logo">
-            </a>
-        {/each}
+                <!-- images with links -->
+                <a href={p.link} target="_blank" rel="noopener noreferrer" class="partner">
+                    <img src={p.src} alt="partner logo">
+                </a>
+            {/each}
         </div>
 
         <p class="section-footer">
@@ -53,7 +59,7 @@
 </section>
 
 <style>
-    /* ── desktop version */
+    /* desktop version */
     .hero {
         position: relative;
         min-height: 100vh;
@@ -65,6 +71,7 @@
                 rgba(39,39,39,0.6) 90%,
                 rgba(39,39,39,1) 100%
             ),
+            /* load hero image */
             url("/hero-bg-img.png");
 
         background-size: cover;
@@ -179,6 +186,7 @@
         transition: opacity 0.2s ease;
     }
 
+    /* slightly scale down discord logo to fit with rest */
     .partner:last-child img {
         height: 40px;
         margin-left: 20px;
@@ -191,7 +199,7 @@
         cursor: pointer;
     }
 
-    /* divider */
+    /* vertical divider - after each partner except discord */
     .partner:not(:last-child)::after {
         content: "";
         position: absolute;
@@ -237,7 +245,7 @@
             background-position: top center;
             background-size: cover;
 
-            /* content starts below image banner */
+            /* content below hero image */
             padding-top: 55vw;
         }
 
@@ -279,7 +287,7 @@
             line-height: 1.6;
         }
 
-        /* Remove <br> tags visually on mobile */
+        /* remove breaks on mobile */
         .hero-description br {
             display: none;
         }
@@ -301,10 +309,10 @@
 
         .partners {
             margin-top: 48px;
-            /* Allow wrapping if logos overflow */
+            /* allow wrapping if logos overflow */
             flex-wrap: wrap;
             gap: 0;
-            /* Align to left edge with padding */
+            /* align to left edge with padding */
             padding: 0;
         }
 

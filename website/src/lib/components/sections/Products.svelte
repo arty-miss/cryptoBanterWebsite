@@ -1,3 +1,5 @@
+<!-- ad section that showcases banter bubbles app -->
+
 <section class="content" id="products">
 
     <div class="text">
@@ -41,7 +43,6 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-        overflow: hidden;
     }
 
     h1 {
@@ -57,11 +58,11 @@
 
     .banter-bubbles {
         margin-bottom: 200px;
-        margin-left: 50px;
 
         padding: 15px;
         border-radius: 20px;
         background: red;
+        overflow: visible !important;
 
         color: white;
         font-size: 20px;   
@@ -77,6 +78,7 @@
     .banter-bubbles:hover {
         transform: scale(1.15);
         box-shadow: 10px 5px 5px rgba(255, 0, 0, 0.404);
+        overflow: visible !important;
     }
 
     .image {

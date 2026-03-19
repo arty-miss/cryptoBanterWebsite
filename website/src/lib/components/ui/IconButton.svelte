@@ -1,3 +1,5 @@
+<!-- reused social media icons for footer -->
+
 <script>
     const { src = "", alt = "", size = 45, circle = true, link = "" } = $props();
 </script>

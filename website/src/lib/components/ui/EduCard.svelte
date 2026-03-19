@@ -1,5 +1,8 @@
+<!-- template for reused courses -->
+
 <script>
-    const { logo = "", teacherImage = "", smallTitle = "", date = "", title = "", description = "", timer = null, link = ""} = $props();
+import Countdown from "$lib/components/ui/Countdown.svelte";
+    const { logo = "", teacherImage = "", subTitle = "", date = "", title = "", description = "", timer = null, link = ""} = $props();
 </script>
 
 <div class="card-container">
@@ -14,13 +17,14 @@
             </div>
 
             <div class="timer">
-                {@render timer?.()}
+                    <Countdown />
             </div>
+
         </div>
 </div>
 
     <div class="content">
-        <p class="small-title-date">{smallTitle} | {date}</p>
+        <p class="small-title-date">{subTitle} | {date}</p>
         <h3>{title}</h3>
         <p class="description">{description}</p>
 
@@ -164,10 +168,16 @@
 
     /* fixed image heights for mobile */
     @media (max-width: 768px) {
+
+        .card:hover {
+            transform: none;
+        }
+
         .image-wrapper {
             height: 480px;
             display: flex;
-            align-items: flex-end; /* keeps subject anchored nicely */
+            /* keep subject anchored */
+            align-items: flex-end; 
             justify-content: center;
             overflow: hidden;
         }
@@ -183,8 +193,8 @@
         .teacher {
             height: 100%;
             width: auto;
-            object-fit: contain; /* or "cover" depending on look you want */
-            margin-left: 155px; /* important for centering on mobile */
+            object-fit: contain;
+            margin-left: 155px;
         }
 
         .small-title-date{

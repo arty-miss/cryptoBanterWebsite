@@ -1,3 +1,5 @@
+<!-- resued newsletter sign up button for footer -->
+
 <script>
     const {title = ""} = $props();
 </script>

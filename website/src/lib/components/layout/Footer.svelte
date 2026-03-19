@@ -1,3 +1,5 @@
+<!-- footer section on bottom of page -->
+
 <script>
     import IconButton from "$lib/components/ui/IconButton.svelte";
     import NewsletterCard from "$lib/components/ui/NewsletterCard.svelte";
@@ -28,7 +30,7 @@
         </div>
 
 
-        <!-- inks section in middle -->
+        <!-- links section in middle -->
         <div class="links">
             <h4>EDUCATION</h4>
             <a>Intro to Crypto</a>
@@ -143,6 +145,7 @@
     }
 
     .links {
+        margin-left: 100px;
         font-family: "Noyh Geometric", sans-serif;
         display: flex;
         flex-direction: column;
@@ -156,6 +159,7 @@
     }
 
     .newsletter {
+        margin-left: 60px;
         display: flex;
         flex-direction: column;
         gap: 16px;

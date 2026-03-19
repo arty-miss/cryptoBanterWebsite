@@ -1,7 +1,9 @@
 <!-- found at top right of page, on navbar-->
 
 <div class="live">
-    <div class="dot"></div> <!-- red dot icon -->
+    <!-- red dot icon -->
+    <div class="dot"></div>
+    <!-- dedicated link -->
     <a href="#streams">Live Streams</a>
 </div>
 
@@ -20,6 +22,7 @@
         font-weight: 500;
         cursor: pointer;
 
+        /* ensure smooth transition without flickering by already scaling to 1 */
         transform: scale(1);
         transition: all 0.2s ease-in-out;
     }
@@ -35,7 +38,7 @@
 
         background: red;
         border-radius: 50%;
-        /* helps prevent flickering */
+        /* prevent flickering */
         transform: scale(1);
         transition: all 0.2s ease-in-out;
     }

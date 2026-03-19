@@ -1,3 +1,5 @@
+<!-- reused list element visible on desktop version of streams section -->
+
 <script>
     const { title = ""} = $props();
 </script>
@@ -17,10 +19,11 @@
         font-size: 23px;
 
         line-height: 1.2;
-        height: calc(2 * 1.2em + 40px); /* 2 lines * line-height + top+bottom padding (20+20) */
+        /* 2 lines * line-height + top+bottom padding (20+20) */
+        height: calc(2 * 1.2em + 40px); 
         display: flex;
-        align-items: center;          /* vertically center text */
-        justify-content: center;      /* horizontally center text */
+        align-items: center; 
+        justify-content: center;      
 
         cursor: pointer;
         transition: all 0.15s ease-in-out;

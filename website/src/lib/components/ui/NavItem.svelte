@@ -1,8 +1,8 @@
 <script>
-    const { icon = "", label = "", link = ""} = $props();
+    const { icon = "", label = "", link = "#"} = $props();
 </script>
 
-<!-- all nav items look the same so it's just a matter of setting the image and text-->
+<!-- all nav items look the same so icons, text and links can be set as variables -->
 
 <div class="nav-item">
     <img src={icon} alt={label} />

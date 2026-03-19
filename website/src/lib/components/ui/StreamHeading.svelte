@@ -1,3 +1,5 @@
+<!-- heading moved to separate file for less bloat in streams section, and made atomic -->
+
 <script>
     const { title = "", description = ""} = $props();
 </script>
