@@ -292,6 +292,7 @@
         .links {
             align-items: center;
             padding: 24px 0 8px;
+            margin-right: 90px;
         }
 
         .links h4 {
@@ -305,6 +306,7 @@
         .newsletter {
             align-items: center;
             margin-top: 24px;
+            margin-right: 55px;
         }
 
         .newsletter h4 {
